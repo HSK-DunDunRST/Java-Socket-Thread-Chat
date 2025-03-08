@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-        MyServer myServer = new MyServer(25252);
+        MyServer myServer = new MyServer(3000);
         myServer.start();
 
         Scanner sc = new Scanner(System.in);
@@ -16,7 +16,7 @@ public class Main {
                 case "start":
                     if(myServer.isStarted()) System.out.println("서버가 실행중입니다.");
                     else {
-                        myServer = new MyServer(25252);
+                        myServer = new MyServer(3000);
                         myServer.start();
                     }
                     break;
